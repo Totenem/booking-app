@@ -1,0 +1,62 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+sheets/
+credentials.json
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Pytest
+.cache
+*.cover
+*.log
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Other
+*.DS_Store
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+*.log
+*.pid
+*.seed
+*.sqlite3
+*.db
+*.db-journal
