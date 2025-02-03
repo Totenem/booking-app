@@ -12,7 +12,7 @@ credentials = {
     "type": "service_account",
     "project_id": os.getenv("GOOGLE_PROJECT_ID"),
     "private_key_id": os.getenv("GOOGLE_PRIVATE_KEY_ID"),
-    "private_key": os.getenv("GOOGLE_PRIVATE_KEY").replace('\\n', '\n'),
+    "private_key": os.getenv("GOOGLE_PRIVATE_KEY"),
     "client_email": os.getenv("GOOGLE_CLIENT_EMAIL"),
     "client_id": os.getenv("GOOGLE_CLIENT_ID"),
     "auth_uri": os.getenv("GOOGLE_AUTH_URI"),
@@ -141,5 +141,9 @@ def search_bookings(name: str = None, date: str = None):
            (date and date in booking["Details"]["Date"]):
             results.append(booking)
     return {"Search Results": results}
+
+@app.get("/favicon.ico")
+async def favicon():
+    return {"message": "Favicon not found"}, 204
 
     
