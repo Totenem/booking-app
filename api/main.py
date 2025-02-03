@@ -38,7 +38,11 @@ sheet = client.open_by_key(sheet_id)
 # print(values_list)
 
 app = FastAPI()
-bookings = []  
+bookings = []
+
+@app.get("/")
+def starting():
+    return {"Hello": "World!"} 
 
 @app.get("/bookings")
 def booking():
